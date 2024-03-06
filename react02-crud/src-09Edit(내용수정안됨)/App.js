@@ -100,18 +100,10 @@ function App() {
   articleComp = <ArticleWrite writeAction={(t, w, c)=>{
     //매개변수는 제목, 작성자, 내용으로 정의
     console.log("App.js", t, w, c);
-
-    //현재날짜를 가져온다. 0000-00-00 포맷으로 문자열을 생성한다.
-    let dateObj = new Date();
-    var year = dateObj.getFullYear();
-    var month = ("0" + (1 + dateObj.getMonth())).slice(-2);
-    var day = ("0" + dateObj.getDate()).slice(-2);
-    let nowDate = year + "-" + month + "-" + day;
-
+    
     /* 사용자가 입력한 내용으로 새로운 객체를 생성한다.
     일련번호는 nextNo 라는 state를 사용한다. */
-    let addTopics = {no:nextNo, title:t, writer:w, contents:c,
-    date:nowDate};
+    let addTopics = {no:nextNo, title:t, writer:w, contents:c};
 
     /* 새롭게 만든객체를 기존 배열인 topics에 추가한다. 그리고
     기존객체를 통해 state를 변경한다. */
@@ -190,27 +182,19 @@ function App() {
   /* 수정은 기존에 입력한 내용을 작성폼에 서텡하는것이 먼저 처리되어야
   하므로 props로 전달한다. */
   articleComp = <ArticleEdit selectRow={selectRow}
-      /* 수정처리 */
       editAction={(t, w, c)=>{
-        /* 사용자가 수정한 값으로 새로운 객체를 생성한다. */
+        //수정처리
         let editTopics = {no:no, title:t, writer:w, contents:c};
         console.log('수정내용', editTopics);
 
-        //스프레드 연산자를 통해 데이터 배열의 복사복을 만든다.
         let copyTopics = [...topics];
-        //복사본의 크기만큼 반복한다.
         for(let i=0 ; i<copyTopics.length ; i++){
-          //현재 수정하려는 객체를 찾는다.
           if(copyTopics[i].no===no){
-            //수정할 객체로 변경한다.
             copyTopics[i] = editTopics;
-            //수정이 완료되면 즉시 루프를 탈출한다.
             break;
           }
         }
-        //복사본을 통해 state를 변경한다.
         setTopics(copyTopics);
-        //내용보기 화면으로 전환한다.
         setMode('view');
       }}
     ></ArticleEdit>
