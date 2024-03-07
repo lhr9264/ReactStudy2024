@@ -1,0 +1,26 @@
+{
+    "results":[
+        {"gender":"female",
+        "name":{"title":"Miss","first":"Nelci","last":"Oliveira"},
+        "location":{
+            "street":{"number":5528,"name":"Rua Paraíba "},
+            "city":"Sobral",
+            "state":"Rio Grande do Norte",
+            "country":"Brazil",
+            "postcode":42350,
+            "coordinates":{"latitude":"-79.6436","longitude":"149.6549"},
+            "timezone":{
+                "offset":"-4:00",
+                "description":"Atlantic Time (Canada), Caracas, La Paz"}
+        },
+        "email":"nelci.oliveira@example.com",
+        "login":{
+            "uuid":"bb4487db-5340-414e-9182-9068b4210503",
+            "username":"bluelion101",
+            "password":"longer",
+            "salt":"lrbhs4ef",
+            "md5":"dfb2d0bb20ca5e98522cf4fc28ec64f6",
+            "sha1":"131dcb73b0316f2970071b4efb5a98485155ac37",
+            "sha256":"cff86eac6be6d3ff648c73d77672711397b50eddd3fd938bea40413616db5faf"
+        },
+        "dob":{"date":"1966-05-26T14:20:38.529Z","age":57},"registered":{"date":"2012-06-25T06:56:11.301Z","age":11},"phone":"(21) 0030-2221","cell":"(02) 0908-2817","id":{"name":"CPF","value":"186.052.421-67"},"picture":{"large":"https://randomuser.me/api/portraits/women/67.jpg","medium":"https://randomuser.me/api/portraits/med/women/67.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/67.jpg"},"nat":"BR"}],"info":{"seed":"9bb0b94f1266bca5","results":1,"page":1,"version":"1.4"}}
