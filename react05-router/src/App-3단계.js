@@ -20,18 +20,18 @@ const List = (props)=> {
   // <tr>태그 출력을 위한 빈 배열 생성
   const lists = [];
   // props로 전달된 데이터의 크기만큼 반복
-  // for(let i=0 ; i<props.topics.length ; i++){
-  //   let row = props.topics[i];
-  //   // 각 루프에서 데이터 파싱 후 <tr>태그를 추가
-  //   lists.push(
-  //     <tr key={row.no}>
-  //       <td>{row.no}</td>
-  //       {/* Link컴포넌트로 "/view/:no" 패턴으로 기술 */}
-  //       <td><Link to={"/view/"+row.no}>{row.title}</Link></td>
-  //       <td>{row.writer}</td>
-  //     </tr>
-  //   );
-  // }
+  for(let i=0 ; i<props.topics.length ; i++){
+    let row = props.topics[i];
+    // 각 루프에서 데이터 파싱 후 <tr>태그를 추가
+    lists.push(
+      <tr key={row.no}>
+        <td>{row.no}</td>
+        {/* Link컴포넌트로 "/view/:no" 패턴으로 기술 */}
+        <td><Link to={"/view/"+row.no}>{row.title}</Link></td>
+        <td>{row.writer}</td>
+      </tr>
+    );
+  }
   return (
     <>
       <header>

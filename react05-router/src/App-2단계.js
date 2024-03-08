@@ -170,7 +170,6 @@ function NotFound(){
       </div>
     );
 }
-
 /**
  * NavLink 컴포넌트
  * 일반적인 링크는 <a>태그를 사용하지만
